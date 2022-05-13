@@ -13,27 +13,37 @@ Import the necessary modules.
 For performing smoothing operation on a image.
 
 Average filter
+```python
 kernel=np.ones((11,11),np.float32)/121
 image3=cv2.filter2D(image2,-1,kernel)
+```
 
 Weighted average filter
+```python
 kernel1=np.array([[1,2,1],[2,4,2],[1,2,1]])/16
 image3=cv2.filter2D(image2,-1,kernel1)
+```
 
 Gaussian Blur
+```python
 gaussian_blur=cv2.GaussianBlur(image2,(33,33),0,0)
 Median filter
 median=cv2.medianBlur(image2,13)
+```
 
 ### Step3:
 For performing sharpening on a image.
 
 Laplacian Kernel
+```python
 kernel2=np.array([[-1,-1,-1],[2,-2,1],[2,1,-1]])
 image3=cv2.filter2D(image2,-1,kernel2)
+```
 
 Laplacian Operator
+```python
 laplacian=cv2.Laplacian(image2,cv2.CV_64F)
+```
 
 ### Step4:
 Display all the images with their respective filters.
