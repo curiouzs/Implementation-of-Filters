@@ -69,12 +69,18 @@ image2=cv2.cvtColor(image1,cv2.COLOR_BGR2RGB)
 
 i) Using Averaging Filter
 ```Python
-
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-image1=cv2.imread("abu.jpg")
-image2=cv2.cvtColor(image1,cv2.COLOR_BGR2RGB)
+kernel=np.ones((11,11),np.float32)/121
+image3=cv2.filter2D(image2,-1,kernel)
+plt.figure(figsize=(8,8))
+plt.subplot(1,2,1)
+plt.imshow(image2)
+plt.title("Original Image")
+plt.axis("off")
+plt.subplot(1,2,2)
+plt.imshow(image3)
+plt.title("Average Filter Image")
+plt.axis("off")
+plt.show()
 
 
 ```
@@ -179,30 +185,27 @@ plt.show()
 
 i) Using Averaging Filter
 </br>
-</br>
-</br>
-</br>
+![Screenshot (53)](https://user-images.githubusercontent.com/75234646/168294206-8821a86a-337d-41f5-b0c6-50b6068020e9.png)
+
 </br>
 
 ii) Using Weighted Averaging Filter
 </br>
-</br>
-</br>
-</br>
+![Screenshot (54)](https://user-images.githubusercontent.com/75234646/168294161-804c2641-e4e8-4581-8ca2-46f92dc3a8a7.png)
+
 </br>
 
 iii) Using Gaussian Filter
 </br>
-</br>
-</br>
-</br>
+![Screenshot (55)](https://user-images.githubusercontent.com/75234646/168294373-f501fc70-a3d3-4eb5-9bf7-6739fc24c214.png)
+
 </br>
 
 iv) Using Median Filter
 </br>
-</br>
-</br>
-</br>
+![Screenshot (56)](https://user-images.githubusercontent.com/75234646/168294119-3b543aa8-c5d1-4b46-85ad-41b4d6804107.png)
+
+
 </br>
 
 ### 2. Sharpening Filters
@@ -210,16 +213,14 @@ iv) Using Median Filter
 
 i) Using Laplacian Kernal
 </br>
-</br>
-</br>
-</br>
+![Screenshot (57)](https://user-images.githubusercontent.com/75234646/168294328-507c4035-a46b-42ba-a2d2-5682fb6effdc.png)
+
 </br>
 
 ii) Using Laplacian Operator
 </br>
-</br>
-</br>
-</br>
+![Screenshot (62)](https://user-images.githubusercontent.com/75234646/168294259-1c27f6bb-8da6-4d16-9c51-b0566c0c14fa.png)
+
 </br>
 
 ## Result:
